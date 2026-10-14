@@ -1,0 +1,102 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:c9b0762c-3505-5a29-b380-94f0200bd45b",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-05T16:38:56Z",
+    "component": {
+      "type": "application",
+      "name": "WELLY",
+      "version": "6ed78b533ac7",
+      "bom-ref": "pkg:generic/anticloud/WELLY@6ed78b533ac7",
+      "purl": "pkg:generic/anticloud/WELLY@6ed78b533ac7",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "6ed78b533ac7a5878bf7fd353d2b27ce3981b96a"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/agile-geoscience/welly"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "unspecified",
+      "purl": "pkg:pypi/numpy",
+      "bom-ref": "pypi/numpy@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "scipy",
+      "version": "unspecified",
+      "purl": "pkg:pypi/scipy",
+      "bom-ref": "pypi/scipy@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "pandas",
+      "version": "unspecified",
+      "purl": "pkg:pypi/pandas",
+      "bom-ref": "pypi/pandas@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "matplotlib",
+      "version": "unspecified",
+      "purl": "pkg:pypi/matplotlib",
+      "bom-ref": "pypi/matplotlib@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "lasio",
+      "version": "unspecified",
+      "purl": "pkg:pypi/lasio",
+      "bom-ref": "pypi/lasio@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "striplog",
+      "version": "unspecified",
+      "purl": "pkg:pypi/striplog",
+      "bom-ref": "pypi/striplog@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "tqdm",
+      "version": "unspecified",
+      "purl": "pkg:pypi/tqdm",
+      "bom-ref": "pypi/tqdm@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "wellpathpy",
+      "version": "unspecified",
+      "purl": "pkg:pypi/wellpathpy",
+      "bom-ref": "pypi/wellpathpy@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "unspecified",
+      "purl": "pkg:pypi/requests",
+      "bom-ref": "pypi/requests@unspecified"
+    }
+  ]
+}
