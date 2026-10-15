@@ -1,0 +1,399 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "WELLY",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\OIL_GAS\\WELLY\\UPSTREAM_CLONE",
+    "git": {
+      "head": "6ed78b533ac7a5878bf7fd353d2b27ce3981b96a",
+      "url": "https://github.com/agile-geoscience/welly",
+      "branch": "main",
+      "committed_at": "2025-07-15T23:15:50-04:00"
+    }
+  },
+  "metrics": {
+    "files_total": 112,
+    "source_files_scanned": 32,
+    "lines_of_code": 10059,
+    "languages": {
+      ".py": 33,
+      ".las": 24,
+      ".png": 12,
+      ".md": 11,
+      ".ipynb": 11,
+      ".csv": 7,
+      "(none)": 5,
+      ".rst": 2,
+      ".cff": 1,
+      ".toml": 1,
+      ".txt": 1,
+      ".xlsx": 1,
+      ".bat": 1,
+      ".css": 1,
+      ".ico": 1
+    }
+  },
+  "licence": {
+    "spdx": "Apache-2.0",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 9,
+    "unique": 9,
+    "by_ecosystem": {
+      "pypi": 9
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "numpy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "numpy"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "scipy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "scipy"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pandas",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "pandas"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "matplotlib",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "matplotlib"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "lasio",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "lasio"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "striplog",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "striplog"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "tqdm",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "tqdm"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "wellpathpy",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "wellpathpy"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "requests",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "requests"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 11,
+    "files_with_findings": 7,
+    "severity": {
+      "high": 0,
+      "medium": 2,
+      "low": 9
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "welly/las.py",
+            "line": 462,
+            "cwe": "CWE-89",
+            "snippet": "other += \"{}\\n\".format(key_) + curve.to_csv()"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 6,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "welly/las.py",
+            "line": 403,
+            "cwe": "CWE-",
+            "snippet": "# TODO: This needs to handle striplogs as well, but striplogs"
+          },
+          {
+            "severity": "low",
+            "file": "welly/location.py",
+            "line": 386,
+            "cwe": "CWE-",
+            "snippet": "TODO"
+          },
+          {
+            "severity": "low",
+            "file": "welly/project.py",
+            "line": 324,
+            "cwe": "CWE-",
+            "snippet": "# This is hacky. See remark in well.get_mnemonics_from_regex()."
+          },
+          {
+            "severity": "low",
+            "file": "welly/utils.py",
+            "line": 417,
+            "cwe": "CWE-",
+            "snippet": "TODO:"
+          },
+          {
+            "severity": "low",
+            "file": "welly/well.py",
+            "line": 951,
+            "cwe": "CWE-",
+            "snippet": "Early hack. Use with extreme caution."
+          },
+          {
+            "severity": "low",
+            "file": "docs/conf.py",
+            "line": 13,
+            "cwe": "CWE-",
+            "snippet": "def autodoc_skip_member(app, what, name, obj, skip, options):"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 3,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "welly/crs.py",
+            "line": 143,
+            "cwe": "CWE-319",
+            "snippet": "# http://trac.osgeo.org/proj/wiki/GenParms"
+          },
+          {
+            "severity": "low",
+            "file": "welly/utils.py",
+            "line": 560,
+            "cwe": "CWE-319",
+            "snippet": "http://ageo.co/1CFxXpO"
+          },
+          {
+            "severity": "low",
+            "file": "docs/conf.py",
+            "line": 87,
+            "cwe": "CWE-319",
+            "snippet": "<svg width=\"200\" height=\"200\" version=\"1.1\" viewBox=\"0 0 187.5 187.5\" xmlns=\"http://www.w3.org/2000/svg\">"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "welly/las.py",
+            "line": 485,
+            "cwe": "CWE-918",
+            "snippet": "with request.urlopen(url) as response:"
+          }
+        ]
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:c9b0762c-3505-5a29-b380-94f0200bd45b",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T06:03:31Z",
+      "component": {
+        "type": "application",
+        "name": "WELLY",
+        "version": "6ed78b533ac7",
+        "bom-ref": "pkg:generic/anticloud/WELLY@6ed78b533ac7",
+        "purl": "pkg:generic/anticloud/WELLY@6ed78b533ac7",
+        "licenses": [
+          {
+            "license": {
+              "id": "Apache-2.0"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "6ed78b533ac7a5878bf7fd353d2b27ce3981b96a"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/agile-geoscience/welly"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "numpy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/numpy",
+        "bom-ref": "pypi/numpy@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "scipy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/scipy",
+        "bom-ref": "pypi/scipy@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "pandas",
+        "version": "unspecified",
+        "purl": "pkg:pypi/pandas",
+        "bom-ref": "pypi/pandas@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "matplotlib",
+        "version": "unspecified",
+        "purl": "pkg:pypi/matplotlib",
+        "bom-ref": "pypi/matplotlib@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "lasio",
+        "version": "unspecified",
+        "purl": "pkg:pypi/lasio",
+        "bom-ref": "pypi/lasio@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "striplog",
+        "version": "unspecified",
+        "purl": "pkg:pypi/striplog",
+        "bom-ref": "pypi/striplog@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "tqdm",
+        "version": "unspecified",
+        "purl": "pkg:pypi/tqdm",
+        "bom-ref": "pypi/tqdm@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "wellpathpy",
+        "version": "unspecified",
+        "purl": "pkg:pypi/wellpathpy",
+        "bom-ref": "pypi/wellpathpy@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "requests",
+        "version": "unspecified",
+        "purl": "pkg:pypi/requests",
+        "bom-ref": "pypi/requests@unspecified"
+      }
+    ]
+  },
+  "elapsed_seconds": 3.67
+}
